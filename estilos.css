@@ -1,0 +1,73 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+/* Color de fondo */
+body {
+    background-color: #313d52;
+}
+/* Formato del nav */
+.navegacion {
+   width: 1000px;
+   background-color: #fff;
+   margin: 30px auto;
+}
+ul.menu, ul.submenu {
+    list-style: none;
+}
+/* Afecta als li principals, no al submenu */
+.menu>li {
+    display: inline-block;
+    position: relative; /*dar una posicion relative para que la referencia de los subelementos sea esta*/
+    /* font-size: 0; */
+    /* overflow: hidden; */
+    text-align: center;
+    /* margin: 0 -1%; */
+}
+.menu>li a {
+    color: #353535;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    padding:  15px 20px;
+    display: inline-block;
+    /* font-size: 1rem; */
+    /* float: left; */
+}
+
+.menu>li>a:hover {
+    color: #ce7d35;
+    background-color: bisque;
+
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.submenu>li {
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.submenu li a {
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+  
+}
+.submenu li a:hover {
+    background-color: aqua;
+
+} 
